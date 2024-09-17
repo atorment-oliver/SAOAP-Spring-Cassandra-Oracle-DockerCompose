@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
+Visite https://eclipse-ee4j.github.io/jaxb-ri 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2024.09.09 a las 02:56:52 PM BOT 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://www.detallenavegacion.com/xml/report">
+    <schemaBindings map="false">
+      <package name="com.detallenavegacion.xml.report"/>
+    </schemaBindings>
+    <bindings scd="tns:getConsumoPorHora">
+      <class ref="com.detallenavegacion.xml.report.GetConsumoPorHora"/>
+    </bindings>
+    <bindings scd="tns:getConsumoPorHoraResponse">
+      <class ref="com.detallenavegacion.xml.report.GetConsumoPorHoraResponse"/>
+    </bindings>
+    <bindings scd="~tns:Reporte">
+      <class ref="com.detallenavegacion.xml.report.Reporte"/>
+    </bindings>
+  </bindings>
+</bindings>
+

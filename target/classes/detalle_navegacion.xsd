@@ -1,0 +1,34 @@
+<ws:schema xmlns:ws="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.detallenavegacion.com/xml/report" xmlns:ns2="http://www.detallenavegacion.com/xml/report"
+targetNamespace="http://www.detallenavegacion.com/xml/report" elementFormDefault="qualified">
+  <ws:element name="getConsumoPorHora">
+    <ws:complexType>
+      <ws:sequence>
+        <ws:element name="Isdn" type="ws:string" minOccurs="1"/>
+        <ws:element name="FechaInicio" type="ws:dateTime" minOccurs="1"/>
+        <ws:element name="FechaFin" type="ws:dateTime" minOccurs="1"/>
+        <ws:element name="Categoria" type="ws:string" minOccurs="1"/>
+      </ws:sequence>
+    </ws:complexType>
+  </ws:element>
+  
+  <ws:complexType name="Reporte">
+    <ws:sequence>
+      <ws:element name="id" type="ws:long"/>
+      <ws:element name="nombre" type="ws:string"/>
+      <ws:element name="total" type="ws:long"/>
+      <ws:element name="fecha" type="ws:string"/>
+      <ws:element name="hora" type="ws:string"/>
+    </ws:sequence>
+  </ws:complexType>
+
+  <ws:element name="getConsumoPorHoraResponse">
+    <ws:complexType>
+    <ws:sequence>
+      <ws:element name="code" type="ws:int"/>
+      <ws:element name="description" type="ws:string"/>
+      <ws:element name="total" type="ws:long"/>
+      <ws:element name="lista" type="tns:Reporte" minOccurs="0" maxOccurs="unbounded"/>
+    </ws:sequence>
+    </ws:complexType>
+  </ws:element>
+</ws:schema>
